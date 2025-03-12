@@ -6,6 +6,7 @@ import { defineFakeRoute } from "vite-plugin-fake-server/client";
  * admin：管理员角色
  * common：普通角色
  */
+
 const permissionRouter = {
   path: "/permission",
   meta: {
@@ -55,6 +56,27 @@ const permissionRouter = {
   ]
 };
 
+const testRouter = {
+  path: "/test",
+  redirect: "/test/index",
+  meta: {
+    icon: "ri:information-line",
+    // showLink: false,
+    title: "测试页面目录",
+    rank: 90
+  },
+  children: [
+    {
+      path: "/test/index",
+      name: "Test",
+      component: "test.vue",
+      meta: {
+        title: "测试页面"
+      }
+    }
+  ]
+};
+
 export default defineFakeRoute([
   {
     url: "/get-async-routes",
@@ -62,7 +84,7 @@ export default defineFakeRoute([
     response: () => {
       return {
         success: true,
-        data: [permissionRouter]
+        data: [permissionRouter, testRouter]
       };
     }
   }

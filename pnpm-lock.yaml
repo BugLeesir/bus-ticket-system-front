@@ -59,6 +59,9 @@ importers:
       pinyin-pro:
         specifier: ^3.26.0
         version: 3.26.0
+      pure-admin-thin:
+        specifier: 'file:'
+        version: file:(rollup@4.28.1)(typescript@5.6.3)
       qs:
         specifier: ^6.13.1
         version: 6.13.1
@@ -2907,6 +2910,10 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  'pure-admin-thin@file:':
+    resolution: {directory: '', type: directory}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=22.0.0, pnpm: '>=9'}
 
   qs@6.13.1:
     resolution: {integrity: sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==}
@@ -6301,6 +6308,40 @@ snapshots:
   proxy-from-env@1.1.0: {}
 
   punycode@2.3.1: {}
+
+  pure-admin-thin@file:(rollup@4.28.1)(typescript@5.6.3):
+    dependencies:
+      '@pureadmin/descriptions': 1.2.1(echarts@5.5.1)(element-plus@2.9.0(vue@3.5.13(typescript@5.6.3)))(typescript@5.6.3)
+      '@pureadmin/table': 3.2.1(element-plus@2.9.0(vue@3.5.13(typescript@5.6.3)))(typescript@5.6.3)
+      '@pureadmin/utils': 2.5.0(echarts@5.5.1)(vue@3.5.13(typescript@5.6.3))
+      '@vueuse/core': 12.0.0(typescript@5.6.3)
+      '@vueuse/motion': 2.2.6(rollup@4.28.1)(vue@3.5.13(typescript@5.6.3))
+      animate.css: 4.1.1
+      axios: 1.7.9
+      dayjs: 1.11.13
+      echarts: 5.5.1
+      element-plus: 2.9.0(vue@3.5.13(typescript@5.6.3))
+      js-cookie: 3.0.5
+      localforage: 1.10.0
+      mitt: 3.0.1
+      nprogress: 0.2.0
+      path-browserify: 1.0.1
+      pinia: 2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      pinyin-pro: 3.26.0
+      qs: 6.13.1
+      responsive-storage: 2.2.0
+      sortablejs: 1.15.6
+      vue: 3.5.13(typescript@5.6.3)
+      vue-router: 4.5.0(vue@3.5.13(typescript@5.6.3))
+      vue-tippy: 6.5.0(vue@3.5.13(typescript@5.6.3))
+      vue-types: 5.1.3(vue@3.5.13(typescript@5.6.3))
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - debug
+      - magicast
+      - rollup
+      - supports-color
+      - typescript
 
   qs@6.13.1:
     dependencies:
